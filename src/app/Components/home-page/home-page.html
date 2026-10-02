@@ -12,7 +12,9 @@
         </a>
       </div>
       <div class="nav-icons col">
-        <div class="search-button"><img src="icons/search.svg" alt="search"></div>
+        <div class="search-button" (click)="searchButton = !searchButton">
+          <img src="icons/search.svg" alt="search">
+        </div>
         <div class="favourite-button"><img src="icons/heart.svg" alt="heart"></div>
         <div class="user-button"><img src="icons/user.svg" alt="user"></div>
       </div>
@@ -36,3 +38,48 @@
 
   </div>
 </nav>
+<main>
+  
+</main>
+ @if(searchButton){
+  <div class="search-page-cnt">
+    <div class="search-page">
+      <form>
+        <div class="search-page-header">
+          <h2>Find the right property for you.</h2>
+          <img class="close-search-page" (click)="searchButton = !searchButton" src="icons/close.svg" alt="close" >
+        </div>
+        <div class="contract-type">
+          <label class="contract-option">
+            <input type="radio" name="property" value="apartment">
+            <span>Buy</span>
+          </label>
+          <label class="contract-option">
+            <input type="radio" name="property" value="apartment">
+            <span>Rent</span>
+          </label>
+        </div>
+        <div class="search-page-location">
+          <input type="text" name="" id="location" placeholder="Select a city">
+        </div>
+        <div class="search-page-property-type">
+          <select name="" id="">
+            <option value="man">Stand-alone Villa</option>
+            <option value="man">Sky Penthouse</option>
+            <option value="man">Townhouse</option>
+            <option value="man">Beachfront Chalet</option>
+            <option value="man">Duplex Residence</option>
+          </select>
+        </div>
+        <div class="search-page-price">
+          <select name="" id="">
+            <option value="man">$250,000 - $500,000</option>
+            <option value="man">$500,000 - $750,000</option>
+            <option value="man">$750,000 - $1,000,000</option>
+            <option value="man">Under $250,000</option>
+          </select>
+        </div>
+      </form>
+    </div>
+  </div>
+}

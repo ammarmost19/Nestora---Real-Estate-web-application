@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './home-page.css',
   templateUrl: './home-page.html',
 })
-export class HomePage {}
+export class HomePage {
+  searchButton : boolean = false;
+  
+}
