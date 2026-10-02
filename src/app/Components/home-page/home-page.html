@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md  bg-white">
+<nav class="navbar navbar-expand-md">
   <div class="container-fluid">
     <div class="row nav-row">
       <div class="nav-logo col">
@@ -12,9 +12,6 @@
         </a>
       </div>
       <div class="nav-icons col">
-        <div class="search-button" (click)="searchButton = !searchButton">
-          <img src="icons/search.svg" alt="search">
-        </div>
         <div class="favourite-button"><img src="icons/heart.svg" alt="heart"></div>
         <div class="user-button"><img src="icons/user.svg" alt="user"></div>
       </div>
@@ -39,16 +36,12 @@
   </div>
 </nav>
 <main>
-  
-</main>
- @if(searchButton){
-  <div class="search-page-cnt">
     <div class="search-page">
+      <div class="search-page-header">
+        <h2>Find a place you'll <br> <span>love to call home.</span></h2>
+        <p>Explore over 18,500+ verified luxury villas, penthouses, and seaside retreats across US's most coveted master developments.</p>
+      </div>
       <form>
-        <div class="search-page-header">
-          <h2>Find the right property for you.</h2>
-          <img class="close-search-page" (click)="searchButton = !searchButton" src="icons/close.svg" alt="close" >
-        </div>
         <div class="contract-type">
           <label class="contract-option">
             <input type="radio" name="property" value="apartment">
@@ -59,10 +52,10 @@
             <span>Rent</span>
           </label>
         </div>
-        <div class="search-page-location">
+        <div class="search-page-location search-input">
           <input type="text" name="" id="location" placeholder="Select a city">
         </div>
-        <div class="search-page-property-type">
+        <div class="search-page-property-type search-input">
           <select name="" id="">
             <option value="man">Stand-alone Villa</option>
             <option value="man">Sky Penthouse</option>
@@ -71,7 +64,7 @@
             <option value="man">Duplex Residence</option>
           </select>
         </div>
-        <div class="search-page-price">
+        <div class="search-page-price search-input">
           <select name="" id="">
             <option value="man">$250,000 - $500,000</option>
             <option value="man">$500,000 - $750,000</option>
@@ -79,7 +72,20 @@
             <option value="man">Under $250,000</option>
           </select>
         </div>
+        <div class="search-button">
+          <div class="input-wrapper">
+            <input type="submit" value="">
+          </div>
+        </div>
+        <div class="custom-select">
+          <button>Apartment</button>
+          <div class="options">
+            <div>Apartment</div>
+            <div>Villa</div>
+            <div>Office</div>
+          </div>
+        </div>
       </form>
     </div>
-  </div>
-}
+</main>
+
